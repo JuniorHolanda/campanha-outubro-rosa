@@ -1,22 +1,19 @@
 export const theme = {
   colors: {
-    primary: '#1d9cceff',
-    primaryLight: '#72d8c7ff',
+    default1: "#0c0c0cff",
+    default2: "#ffffff",
 
-    accent: '#005bb1ff',
-    accentLight: '#00ffeaff',
-
-    backgroundDark: '#0b0a14',
-    backgroundSpecial: '#0d0630',
-    backgroundNeutral: '#2d2c3f',
-
-    textLight: '#ffffff',
-    textDark: '#161616',
-
-    gray100: '#ffffffff',
-    gray200: '#eaf6ffff',
-    gray300: '#dfe5f7ff',
+    //10%
+    text: "#181818ff",
+    btn: "#595758ff",
+    //30%
+    medium1: "#ffc8fbff",
+    medium2:" #ff92c2ff",
+    //60%
+    background1: "#ffeef2ff",
+    background2: "#ffe4f3ff"
   },
+  
   spacing: {
     xs: '5px',
     sm: '10px',

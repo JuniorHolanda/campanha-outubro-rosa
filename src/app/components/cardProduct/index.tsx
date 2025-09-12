@@ -1,18 +1,17 @@
 'use client'
 import { JSX, useState } from "react";
-import { Sbutton, Scard, ScontainerImg, Scontent, Stexture } from './card.styled';
+import { Sbutton, Scard, ScontainerImg, Scontent, Sicon} from './card.styled';
 import { CardProps } from "@/utils/interface";
 import { LiaEyeSolid } from "react-icons/lia";
 
 
-export default function Card({ product, i }: CardProps): JSX.Element {
+export default function Card({ product }: CardProps): JSX.Element {
 
     const [changeImg, setChangeImg] = useState(true);
 
 
     return (
         <Scard>
-
             <ScontainerImg
                 $isHovered={changeImg}
                 onMouseEnter={() => setChangeImg(!changeImg)}
@@ -31,15 +30,11 @@ export default function Card({ product, i }: CardProps): JSX.Element {
             </ScontainerImg>
 
             <Scontent>
-                <Stexture rotateTexture={i}
-                    src="./clean.jpg"
-                    alt="textura de zebra" />
-
                 <h1>{product.title}</h1>
                 <p>{product.smallText}</p>
                 <Sbutton href={`/produtos/${product._id}`}>
-                    <LiaEyeSolid />
-                    Ver Produto
+                    <Sicon><LiaEyeSolid /></Sicon>
+                    <p>Ver Produto</p>
                 </Sbutton>
             </Scontent>
         </Scard>

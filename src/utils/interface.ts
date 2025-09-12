@@ -19,5 +19,4 @@ export interface Product {
 
 export interface CardProps {
   product: Product;
-  i: number;
 }

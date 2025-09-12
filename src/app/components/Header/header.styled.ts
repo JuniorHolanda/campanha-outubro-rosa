@@ -13,8 +13,8 @@ export const Swrapper = styled.div`
   gap: ${({ theme }) => theme.spacing.xs};
   background-image: linear-gradient(
     45deg,
-    ${({ theme }) => theme.colors.primary} 10%,
-    ${({ theme }) => theme.colors.accent} 100%
+    ${({ theme }) => theme.colors.medium1} 10%,
+    ${({ theme }) => theme.colors.medium2} 100%
   );
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     width: 90%;
@@ -44,7 +44,7 @@ export const Swrapper = styled.div`
     font-size: ${({ theme }) => theme.fontSizes.textBig};
     letter-spacing: ${({ theme }) => theme.spacing.xs};
     font-family: ${({ theme }) => theme.fonts.title};
-    color: ${({ theme }) => theme.colors.textLight};
+    color: ${({ theme }) => theme.colors.default2};
     text-align: center;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -58,10 +58,12 @@ export const Swrapper = styled.div`
 
   p {
     font-family: ${({ theme }) => theme.fonts.text};
-    font-size: ${({ theme }) => theme.fontSizes.textBig};
+    font-size: ${({ theme }) => theme.fontSizes.textMedium};
     text-align: center;
+    letter-spacing: ${({theme}) => theme.spacing.xs};
+    font-style: italic;
     width: 50%;
-    color: ${({ theme }) => theme.colors.textLight};
+    color: ${({ theme }) => theme.colors.default2};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
       font-size: ${({ theme }) => theme.fontSizes.titleLarge};
@@ -71,7 +73,7 @@ export const Swrapper = styled.div`
 `;
 export const Slink = styled(Link)`
   font-size: ${({ theme }) => theme.fontSizes.text};
-  color: ${({ theme }) => theme.colors.textLight};
+  color: ${({ theme }) => theme.colors.background1};
   font-weight: 800;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {

@@ -1,4 +1,4 @@
-import { DM_Serif_Text, Anek_Telugu } from "next/font/google";
+import { DM_Serif_Text, Rubik } from "next/font/google";
 import ThemeProviderWrapper from "./components/ThemeProviderWrapper";
 import GlobalStylesProvider from "./components/GlobalStyleProvider";
 import BtnZap from "./components/BtnWhatsApp";
@@ -12,9 +12,11 @@ const title = DM_Serif_Text({
   style: ["normal", "italic"]
 });
 
-const anektelugo = Anek_Telugu({
+const text = Rubik({
   variable: "--font-text",
   subsets: ["latin"],
+  weight: ["300", "400", "600", "900"],
+  style: ["normal", "italic"]
 });
 
 
@@ -25,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${title.variable} ${anektelugo.className}`}>
+      <body className={`${title.variable} ${text.variable}`}>
         <ThemeProviderWrapper>
           <GlobalStylesProvider />
           <BtnZap />

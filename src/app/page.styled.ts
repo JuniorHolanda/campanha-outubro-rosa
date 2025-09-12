@@ -7,7 +7,7 @@ export const Shome = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: ${({ theme }) => theme.colors.gray300};
+    background-color: ${({ theme }) => theme.colors.background1};
     height: auto;
 
     section{
@@ -15,7 +15,6 @@ export const Shome = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: ${({theme}) => theme.colors.gray200};
         width: 100%;
         padding: ${({theme}) => theme.spacing.md} ${({theme}) => theme.spacing.lg};
         gap: ${({theme}) => theme.spacing.md};
@@ -56,7 +55,7 @@ export const Slink = styled(Link)`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: ${({ theme }) => theme.colors.primary};
+    background-color: ${({ theme }) => theme.colors.btn};
     padding: ${({theme}) => theme.spacing.md};
     border-radius: ${({theme}) => theme.spacing.md};
     transition: all ease-in-out .5s;

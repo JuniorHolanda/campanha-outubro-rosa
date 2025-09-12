@@ -2,6 +2,7 @@
 import styled, { css } from 'styled-components';
 import { fadeIn, fadeOut } from '@/styles/animation';
 import Link from 'next/link';
+import { Span } from 'next/dist/trace';
 
 interface ImgProps {
   $isHovered: boolean;
@@ -15,7 +16,7 @@ export const Scard = styled.article`
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: ${({ theme }) => theme.colors.gray100};
+  background-color: ${({ theme }) => theme.colors.default2};
   border-radius: ${({ theme }) => theme.spacing.md};
   overflow: hidden;
 `;
@@ -58,17 +59,17 @@ export const Scontent = styled.div`
   width: 100%;
   height: fit-content;
   min-height: 30%;
-  background-color: ${({ theme }) => theme.colors.primaryLight};
+  background-color: ${({ theme }) => theme.colors.medium2};
   overflow: hidden;
   z-index: 1;
 
-  h1,
-  p {
-    color: ${({ theme }) => theme.colors.textDark};
+  h1{
+    color: ${({ theme }) => theme.colors.text};
     text-align: center;
   }
+  
   p {
-    color: ${({ theme }) => theme.colors.textDark};
+    color: ${({ theme }) => theme.colors.text};
     text-align: center;
   }
 `;
@@ -77,17 +78,33 @@ type StextureProps = {
   rotateTexture: number;
 };
 
-export const Stexture = styled.img<StextureProps>`
-  position: absolute;
-  z-index: -1;
-  object-fit: cover;
-  object-position: center;
-  transform: rotate(${({ rotateTexture }) => rotateTexture * 100}deg);
-  width: 160%;
-  opacity: 0.4;
-  /* height: 100%; */
-`;
 export const Sbutton = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: ${({ theme }) => theme.spacing.sm};
+  padding: ${({ theme }) => theme.spacing.sm};
+  border-radius: ${({ theme }) => theme.spacing.md};
+  width: fit-content;
+  background-color: ${({ theme }) => theme.colors.btn};
+  color: ${({ theme }) => theme.colors.default2};
+  font-size: ${({theme}) => theme.fontSizes.text};
+  border: solid red;
+
+  p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid green;
+    height: 100%;
+    width: auto;
+    font-family: ${({theme}) => theme.fonts.text};
+    font-weight: 400
+    ;
+  }
+`;
+export const Sicon = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,6 +112,10 @@ export const Sbutton = styled(Link)`
   padding: ${({ theme }) => theme.spacing.sm};
   border-radius: ${({ theme }) => theme.spacing.md};
   width: fit-content;
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.gray100};
+  background-color: ${({ theme }) => theme.colors.btn};
+  color: ${({ theme }) => theme.colors.default2};
+  font-size: ${({theme}) => theme.fontSizes.text};
+  height: 100%;
+  width: fit-content;
+  border: solid gold;
 `;

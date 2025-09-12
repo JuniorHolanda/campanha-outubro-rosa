@@ -1,4 +1,4 @@
-// 'use client'
+
 import Card from "./components/cardProduct";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
@@ -7,6 +7,7 @@ import { Product } from "@/utils/interface";
 import sliderProduct from "@/app/data/slides.json"
 import { GoBook } from "react-icons/go";
 import { Metadata } from "next";
+import EntraceLoad from "./components/EntranceLoading";
 
 export const metadata: Metadata = {
   title: "Dia Dos médicos",
@@ -35,8 +36,8 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: 'summary_large_image',
-    title: "Dia dos Médicos",
-    description: "Confira nossas sugestões para o dia dos médicos",
+    title: "Outubro Rosa",
+    description: "Confira nossas sugestões para Outubro Rosa",
     images: [
       'https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757619568/Sem_T%C3%ADtulo-2_elfokp.jpg',
     ],
@@ -70,26 +71,29 @@ export default async function Home() {
   );
 
   return (
-    <Shome>
-      <Header
-        title="Dia dos Médicos"
-        text="Confira nossas sugestões de brindes"
-      />
-      <section>
-        <Slider slides={sliderProduct} />
-        <ScontainerImg>
-          {
-            filteredData.map((item, index) => (
-              <Card key={`${item._id}-${index}`} product={item} i={index} />
-            ))
-          }
-        </ScontainerImg>
+    <>
+      <EntraceLoad/>
+      <Shome>
+        <Header
+          title="Outubro Rosa"
+          text="Confira nossas sugestões de brindes"
+        />
+        <section>
+          <Slider slides={sliderProduct} />
+          <ScontainerImg>
+            {
+              filteredData.map((item, index) => (
+                <Card key={`${item._id}-${index}`} product={item}/>
+              ))
+            }
+          </ScontainerImg>
 
-        <Slink rel="noopener noreferrer" target="_blank" href={'http://catalogo.miriammomesso.com.br'}>
-          <GoBook />
-          Mais opções acesse nosso catálogo
-        </Slink>
-      </section>
-    </Shome>
+          <Slink rel="noopener noreferrer" target="_blank" href={'http://catalogo.miriammomesso.com.br'}>
+            <GoBook />
+            Mais opções acesse nosso catálogo
+          </Slink>
+        </section>
+      </Shome>
+    </>
   );
 }
