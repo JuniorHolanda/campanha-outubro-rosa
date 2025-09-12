@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Kit Médico",
+    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757616197/porta-estetoscopio_sbla0u.jpg",
+    "altImg": "Um kit fechado e um aberto com algumas ferramentas de médicos"
+  },
+  {
+    "name": "Térmica Line Duplex",
+    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757616086/termica-line-duplex-02_d7nnh6.jpg",
+    "altImg": "Uma Pasta preta em um homem na rua"
+  },
+  {
+    "name": "Kit Higiene SP",
+    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1747078355/kit_higiene_sp_xumbsc.jpg",
+    "altImg": "Um kit higiêne personalizado aberto com alguns itens dentro"
+  }
+]
