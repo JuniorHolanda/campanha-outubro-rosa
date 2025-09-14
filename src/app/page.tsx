@@ -2,7 +2,7 @@
 import Card from "./components/cardProduct";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
-import { ScontainerImg, Shome, Slink } from "./page.styled";
+import { ScontainerImg, Scontent, Shome, Slink } from "./page.styled";
 import { Product } from "@/utils/interface";
 import sliderProduct from "@/app/data/slides.json"
 import { GoBook } from "react-icons/go";
@@ -72,13 +72,13 @@ export default async function Home() {
 
   return (
     <>
-      {/* <EntraceLoad/> */}
+      <EntraceLoad />
       <Shome>
         <Header
           title="Outubro Rosa"
           text="Confira nossas sugestões de brindes"
         />
-        <section>
+        <Scontent>
           <Slider slides={sliderProduct} />
           <ScontainerImg>
             {
@@ -87,12 +87,11 @@ export default async function Home() {
               ))
             }
           </ScontainerImg>
-
           <Slink rel="noopener noreferrer" target="_blank" href={'http://catalogo.miriammomesso.com.br'}>
             <GoBook />
             Mais opções acesse nosso catálogo
           </Slink>
-        </section>
+        </Scontent>
       </Shome>
     </>
   );

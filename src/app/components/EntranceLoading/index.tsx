@@ -19,7 +19,6 @@ const Soverlay = styled.main`
 export default function EntraceLoad() {
 	const [loading, setLoading] = useState(false);
 	const animationRef = useRef(null);
-	console.log(entraceAnimation.op);
 
 	useEffect(() => {
 		const hasLoaded = sessionStorage.getItem('catalogLoaded')
@@ -32,9 +31,6 @@ export default function EntraceLoad() {
 			}, 6000);
 			return () => clearTimeout(timer)
 		}
-
-
-
 	}, []);
 
 

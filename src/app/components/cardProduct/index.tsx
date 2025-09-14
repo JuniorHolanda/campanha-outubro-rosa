@@ -1,40 +1,54 @@
 'use client'
-import { JSX, useState } from "react";
-import { Sbutton, Scard, ScontainerImg, Scontent, Sicon} from './card.styled';
+import React, { JSX, useEffect, useState } from "react";
+import { Sbutton, Scard, ScontainerImg, ScontainerSlider, Scontent } from './card.styled';
 import { CardProps } from "@/utils/interface";
-import { LiaEyeSolid } from "react-icons/lia";
 
 
 export default function Card({ product }: CardProps): JSX.Element {
 
-    const [changeImg, setChangeImg] = useState(true);
+    const [hovered, setHovered] = useState<number | null>(null);
 
+    const getFlex = (index: number, hovered: number | null) => {
+        if (hovered === null) {
+            // larguras padrão
+            return [3, 2, 1][index];
+        }
+        if (hovered === index) {
+            // quem está hover, aumenta
+            return 4;
+        } else {
+            // os outros diminuem proporcionalmente
+            return index === 0 ? 2 : index === 1 ? 1.5 : 1;
+        }
+    };
+
+
+    const listImg = product.gallery
+    console.log(listImg);
 
     return (
         <Scard>
-            <ScontainerImg
-                $isHovered={changeImg}
-                onMouseEnter={() => setChangeImg(!changeImg)}
-                onMouseLeave={() => setChangeImg(true)}>
-                {changeImg ? (
-                    <img
-                        src={product.thumbnail}
-                        alt={product.altThumbnail}
-                    />
-                ) : (
-                    <img
-                        src={product.gallery[1].img}
-                        alt={product.gallery[1].altImg}
-                    />
-                )}
-            </ScontainerImg>
+            <ScontainerSlider>
+                {listImg.filter((_, index) => index < 3).map((item, index) => {
+                    const expand = getFlex(index, hovered);;
 
+                    return (
+                        <ScontainerImg
+                            key={item._id}
+                            $expand={expand}
+                            onMouseEnter={() => setHovered(index)}
+                            onMouseLeave={() => setHovered(null)}
+                        >
+                            <img src={item.img} alt={item.altImg} />
+                        </ScontainerImg>
+                    );
+                })}
+            </ScontainerSlider>
             <Scontent>
                 <h1>{product.title}</h1>
                 <p>{product.smallText}</p>
                 <Sbutton href={`/produtos/${product._id}`}>
-                    <Sicon><LiaEyeSolid /></Sicon>
-                    <p>Ver Produto</p>
+                    <span>Ver Produto</span>
                 </Sbutton>
             </Scontent>
         </Scard>
