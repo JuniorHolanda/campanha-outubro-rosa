@@ -2,7 +2,7 @@ import { DM_Serif_Text, Rubik } from "next/font/google";
 import ThemeProviderWrapper from "./components/ThemeProviderWrapper";
 import GlobalStylesProvider from "./components/GlobalStyleProvider";
 import BtnZap from "./components/BtnWhatsApp";
-
+import { StyledComponentsRegistry } from "@/utils/StyledConponents";
 
 
 const title = DM_Serif_Text({
@@ -28,11 +28,13 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${title.variable} ${text.variable}`}>
-        <ThemeProviderWrapper>
-          <GlobalStylesProvider />
-          <BtnZap />
-          {children}
-        </ThemeProviderWrapper>
+        <StyledComponentsRegistry>
+          <ThemeProviderWrapper>
+            <GlobalStylesProvider />
+            <BtnZap />
+            {children}
+          </ThemeProviderWrapper>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

@@ -17,13 +17,14 @@ const Soverlay = styled.main`
 `;
 
 export default function EntraceLoad() {
-    const [loading, setLoading] = useState(false);
-    const animationRef = useRef(null);
+	const [loading, setLoading] = useState(false);
+	const animationRef = useRef(null);
+	console.log(entraceAnimation.op);
 
-    useEffect(() => {
+	useEffect(() => {
 		const hasLoaded = sessionStorage.getItem('catalogLoaded')
 
-		if (!hasLoaded){
+		if (!hasLoaded) {
 			setLoading(true);
 			const timer = setTimeout(() => {
 				setLoading(false);
@@ -31,6 +32,7 @@ export default function EntraceLoad() {
 			}, 6000);
 			return () => clearTimeout(timer)
 		}
+
 
 
 	}, []);
@@ -45,6 +47,7 @@ export default function EntraceLoad() {
 					animationData={entraceAnimation}
 					loop={true}
 					style={{ width: '100vw' }}
+					segments={[0, 180]}
 				/>
 			</Soverlay>
 		);

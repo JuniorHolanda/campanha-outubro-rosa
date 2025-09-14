@@ -72,7 +72,7 @@ export default async function Home() {
 
   return (
     <>
-      <EntraceLoad/>
+      {/* <EntraceLoad/> */}
       <Shome>
         <Header
           title="Outubro Rosa"
@@ -83,7 +83,7 @@ export default async function Home() {
           <ScontainerImg>
             {
               filteredData.map((item, index) => (
-                <Card key={`${item._id}-${index}`} product={item}/>
+                <Card key={`${item._id}-${index}`} product={item} />
               ))
             }
           </ScontainerImg>
