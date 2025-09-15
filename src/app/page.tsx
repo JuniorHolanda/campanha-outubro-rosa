@@ -53,12 +53,10 @@ export const metadata: Metadata = {
 export default async function Home() {
 
   const keywords = [
-    'Térmica Line Duplex',
-    'Kit Médico',
-    'Kit Higiene SP',
-    'Necessaire Duo Zíper',
-    'Mochila Fiji',
-    'Mala Brid'
+    'Porta Caneta',
+    'Necessaire Malote',
+    'Chaveiro Basic',
+    'Térmica Baú Quad'
   ];
 
 
