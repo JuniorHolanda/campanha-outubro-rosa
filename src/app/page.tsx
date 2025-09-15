@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 export default async function Home() {
 
   const keywords = [
-    'Porta Caneta',
+    'Porta Caneta Elástico',
     'Necessaire Malote',
     'Chaveiro Basic',
     'Térmica Baú Quad'

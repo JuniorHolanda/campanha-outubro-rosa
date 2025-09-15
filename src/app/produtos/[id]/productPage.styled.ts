@@ -8,8 +8,8 @@ export const Sproduct = styled.section`
     justify-content: start;
     align-items: center;
     width: 100%;
-    height: 100vh;
-    background-color: ${({theme}) => theme.colors.gray200};
+    height: 100%;
+    background-color: ${({theme}) => theme.colors.background1};
 
     @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
         height: auto;
@@ -22,7 +22,7 @@ export const Swrapper = styled.section`
     align-items: center;
     width: 70%;
     height: 80%;
-    background-color: ${({theme}) => theme.colors.gray100};
+    background-color: ${({theme}) => theme.colors.background2};
     padding: ${({theme}) => theme.spacing.lg};
     gap: ${({theme}) => theme.spacing.md};
     
@@ -67,7 +67,7 @@ export const Scontent = styled.div`
     
     h1{
         font-size:  ${({theme}) => theme.fontSizes.titleLarge};
-        color:  ${({theme}) => theme.colors.textDark};
+        color:  ${({theme}) => theme.colors.text};
 
         @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
             font-size:  ${({theme}) => theme.fontSizes.titleLarge};
@@ -79,7 +79,7 @@ export const Scontent = styled.div`
         
     p{
         font-size:  ${({theme}) => theme.fontSizes.text};
-        color:  ${({theme}) => theme.colors.textDark};
+        color:  ${({theme}) => theme.colors.text};
 
         @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
             font-size:  ${({theme}) => theme.fontSizes.textMedium};
@@ -95,10 +95,11 @@ export const Scontent = styled.div`
         gap:  ${({theme}) => theme.spacing.sm};
         
         span{
-            background-color:  ${({theme}) => theme.colors.textDark};
+            background-color:  ${({theme}) => theme.colors.medium2};
             padding: ${({theme}) => theme.spacing.sm};
             border-radius: ${({theme}) => theme.spacing.md};;
-            color:  ${({theme}) => theme.colors.textLight};
+            color:  ${({theme}) => theme.colors.default2};
+            font-weight: 600;
          }
     }
 `
@@ -111,11 +112,11 @@ export const Slink = styled(Link)`
     width: fit-content;
     gap:  ${({theme}) => theme.spacing.sm};
     padding: ${({theme}) => theme.spacing.sm} ${({theme}) => theme.spacing.md} ;
-    background-color: ${({theme}) => theme.colors.primary};
+    background-color: ${({theme}) => theme.colors.btn};
     border-radius: ${({theme}) => theme.spacing.md} ;
     font-size:  ${({theme}) => theme.fontSizes.textMedium};
     font-weight: 800;
-    color:  ${({theme}) => theme.colors.textLight};
+    color:  ${({theme}) => theme.colors.default2};
 
     @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
         font-size:  ${({theme}) => theme.fontSizes.textMedium};

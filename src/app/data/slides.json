@@ -1,17 +1,22 @@
 [
   {
-    "name": "Kit Médico",
-    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757616197/porta-estetoscopio_sbla0u.jpg",
-    "altImg": "Um kit fechado e um aberto com algumas ferramentas de médicos"
+    "name": "Chaveiro Basic",
+    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1747078355/chaveiro_basic_brlzgh.jpg",
+    "altImg": "Dois brindes chaveiros personalizadas sobre uma superficie de algodão"
   },
   {
-    "name": "Térmica Line Duplex",
-    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757616086/termica-line-duplex-02_d7nnh6.jpg",
-    "altImg": "Uma Pasta preta em um homem na rua"
+    "name": "Porta caneta elástico",
+    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757944211/banner-porta-caneta-elastico_o6lqms.jpg",
+    "altImg": "Uma agenda personalizada rosa sobre uma mesa de escritório, envolto à agenda está o brinde corporativo personalizado porta caneta com canetas personalizadas dentro"
   },
   {
-    "name": "Kit Higiene SP",
-    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1747078355/kit_higiene_sp_xumbsc.jpg",
-    "altImg": "Um kit higiêne personalizado aberto com alguns itens dentro"
+    "name": "Necessaire Malote",
+    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757944377/banner-nec-malote_mwmdbg.jpg",
+    "altImg": "Uma necessaire branca feita em sintético sobre um fundo rosa minimalista"
+  },
+  {
+    "name": "Térmica Baú Quad",
+    "img": "https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757945670/termica-bau-quad-cozinha_hego9g.jpg",
+    "altImg": "Uma térmica personalizada com temática Outubro Rosa sobre uma bancada com alguns lanches e bebidas dentro"
   }
 ]

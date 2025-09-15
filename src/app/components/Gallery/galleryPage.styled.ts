@@ -33,7 +33,7 @@ export const ScontainerImgMain = styled.div`
     width: 80%;
     height: 100%;
     overflow: hidden;
-    border: solid ${({theme}) => theme.colors.primary};
+    border: solid ${({theme}) => theme.colors.medium1};
     border-radius: ${({theme}) => theme.spacing.sm};
 
     @media (max-width: ${({theme}) => theme.breakpoints.desktop}) {
@@ -73,7 +73,7 @@ export const ScontainerSecondImg = styled.div<ActiveProps>`
     overflow: hidden;
     height: 100%;
     width: 100%;
-    border: solid ${(props) => (props.$isactive ? theme.colors.primary : theme.colors.gray200)};
+    border: solid ${(props) => (props.$isactive ? theme.colors.medium1 : theme.colors.medium2)};
     border-radius: ${({theme}) => theme.spacing.sm};
     cursor: pointer;
 

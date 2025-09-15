@@ -22,7 +22,7 @@ export const SswiperWrapper = styled.div`
       top: 30px;
       left: 60px;
       text-transform: capitalize;
-      color: ${({theme}) => theme.colors.accentLight};
+      color: ${({theme}) => theme.colors.text};
       font-weight: 800;
     }
 
@@ -35,9 +35,9 @@ export const SswiperWrapper = styled.div`
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: ${({theme}) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.text};
   }
 
   .swiper-pagination-bullet {
-color: ${({theme}) => theme.colors.primary};  }
+color: ${({theme}) => theme.colors.text};  }
 `;

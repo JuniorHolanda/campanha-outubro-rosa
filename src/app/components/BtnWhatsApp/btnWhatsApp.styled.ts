@@ -13,7 +13,7 @@ export const Sbtn = styled(FaWhatsapp)`
     bottom: 15px;
     right: 15px;
     font-size: ${({theme}) => theme.fontSizes.textBig};
-    color: ${({theme}) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.btn};
     padding: 10px;
     cursor: pointer;
     z-index: 1;
