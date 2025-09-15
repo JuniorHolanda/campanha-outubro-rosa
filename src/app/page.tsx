@@ -56,7 +56,9 @@ export default async function Home() {
     'Porta Caneta Elástico',
     'Necessaire Malote',
     'Chaveiro Basic',
-    'Térmica Baú Quad'
+    'Térmica Baú Quad',
+    'Carteira Slim',
+    'Necessaire Fachini'
   ];
 
 
