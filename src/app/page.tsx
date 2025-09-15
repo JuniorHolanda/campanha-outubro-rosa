@@ -10,8 +10,8 @@ import { Metadata } from "next";
 import EntraceLoad from "./components/EntranceLoading";
 
 export const metadata: Metadata = {
-  title: "Dia Dos médicos",
-  description: "Confira nossas sugestões de brindes para o dia dos médicos",
+  title: "Outubro Rosa",
+  description: "Confira nossas sugestões de brindes para o Outubro Rosa",
 
   icons: {
     icon: '/favicon.png',
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
 
 
   openGraph: {
-    title: "Dia dos Médicos ",
-    description: "Confira nossas sugestões de brindes para o Dia dos Médicos",
+    title: "Outubro Rosa ",
+    description: "Confira nossas sugestões de brindes para o Outubro Rosa",
     type: 'website',
     url: 'catalogo.miriammomesso.com.br',
     images: [
       {
-        url: 'https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757619568/Sem_T%C3%ADtulo-2_elfokp.jpg',
+        url: 'https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757971418/thumbnail_mjpgoi.jpg',
         width: 600,
         height: 600,
         alt: 'logo da empresa miriam momesso',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Outubro Rosa",
     description: "Confira nossas sugestões para Outubro Rosa",
     images: [
-      'https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757619568/Sem_T%C3%ADtulo-2_elfokp.jpg',
+      'https://res.cloudinary.com/dnr3wfqyy/image/upload/v1757971418/thumbnail_mjpgoi.jpg',
     ],
   },
 
@@ -55,8 +55,8 @@ export default async function Home() {
   const keywords = [
     'Porta Caneta Elástico',
     'Necessaire Malote',
-    'Chaveiro Basic',
     'Térmica Baú Quad',
+    'Chaveiro Basic',
     'Carteira Slim',
     'Necessaire Fachini'
   ];
