@@ -8,6 +8,7 @@ import sliderProduct from "@/app/data/slides.json"
 import { GoBook } from "react-icons/go";
 import { Metadata } from "next";
 import EntraceLoad from "./components/EntranceLoading";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Outubro Rosa",
@@ -93,6 +94,7 @@ export default async function Home() {
           </Slink>
         </Scontent>
       </Shome>
+      <Footer />
     </>
   );
 }
