@@ -32,7 +32,6 @@ const maxImgs = width === undefined ? 3 : (width < 1000 ? 1 : 3);
   };
 
   const listImg = product.gallery;
-  console.log(listImg);
 
   return (
     <Scard>

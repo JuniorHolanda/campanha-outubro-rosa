@@ -1,15 +1,53 @@
-import { PiPhoneCall, PiPhoneCallFill } from "react-icons/pi";
-import { Scontainer, Scontent, Sfooter, Sform, Ssignature } from "./Footer.styles";
+"use client";
+
+import { PiPhoneCallFill } from "react-icons/pi";
+import {
+  Scontainer,
+  Scontent,
+  Sfooter,
+  Sform,
+  Ssignature,
+} from "./Footer.styles";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { VscGlobe } from "react-icons/vsc";
-import { TbLetterR } from "react-icons/tb";
-import { MdOutlineEmail, MdOutlineMarkEmailUnread } from "react-icons/md";
+import { MdOutlineEmail } from "react-icons/md";
+import { useState } from "react";
+import axios from "axios";
+
+type PropsData = {
+  name: string;
+  email: string;
+};
 
 export default function Footer() {
   const textWhatsApp =
     "Olá venho da campanha Outubro Rosa e gostaria de saber mais sobre os produtos.";
   const numbWhatsApp = "38070539";
+
+  const [formData, setFormData] = useState<PropsData>({
+    name: "",
+    email: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    try {
+      const { data } = await axios.post(
+        "https://back-end-catalogo-miriam-momesso.onrender.com/subscribe",
+        formData
+      );
+
+      console.log("Sucesso:", data);
+      alert("Inscrição realizada com sucesso!");
+      setFormData({ name: "", email: "" });
+    } catch (error) {
+      console.error(error);
+      alert("Ocorreu um erro ao enviar os dados");
+    }
+  };
 
   return (
     <Sfooter>
@@ -87,14 +125,18 @@ export default function Footer() {
         <Scontainer>
           <h3>Newsletter</h3>
           <p>Assine nossa newsletter e tenha acesso a ofertas exclusivas.</p>
-          <Sform>
+          <Sform onSubmit={handleSubmit}>
             <div>
               <label>
                 Insira seu nome:
                 <input
                   type="text"
-                  name="nome"
+                  name="name"
+                  value={formData.name}
                   placeholder="Digite seu nome"
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   required
                 />
               </label>
@@ -103,6 +145,10 @@ export default function Footer() {
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   placeholder="Digite seu email"
                   required
                 />
@@ -114,7 +160,14 @@ export default function Footer() {
       </Scontent>
       <Ssignature>
         <address>
-          Desenvolvido por <a href="https://github.com/JuniorHolanda" target="_blank" rel="noopener noreferrer">Pedro Holanda</a>
+          Desenvolvido por{" "}
+          <a
+            href="https://github.com/JuniorHolanda"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pedro Holanda
+          </a>
         </address>
       </Ssignature>
     </Sfooter>
