@@ -16,7 +16,7 @@ export const Sbtn = styled(FaWhatsapp)`
     color: ${({theme}) => theme.colors.btn};
     padding: 10px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 3;
     
     &:hover{
         color: #075e54;
