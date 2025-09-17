@@ -86,16 +86,28 @@ export default function Footer() {
 
         <Scontainer>
           <h3>Newsletter</h3>
+          <p>Assine nossa newsletter e tenha acesso a ofertas exclusivas.</p>
           <Sform>
-            <label>
-              Insira seu e-mail:
-              <input
-                type="email"
-                name="email"
-                placeholder="email@email.com"
-                required
-              />
-            </label>
+            <div>
+              <label>
+                Insira seu nome:
+                <input
+                  type="text"
+                  name="nome"
+                  placeholder="Digite seu nome"
+                  required
+                />
+              </label>
+              <label>
+                Insira seu e-mail:
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Digite seu email"
+                  required
+                />
+              </label>
+            </div>
             <button type="submit">Assinar</button>
           </Sform>
         </Scontainer>

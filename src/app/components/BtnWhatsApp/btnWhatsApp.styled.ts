@@ -8,7 +8,6 @@ export const Slink = styled(Link)`
   position: fixed;
   z-index: 100;
   display: flex;
-  /* border: solid 1px #00000013; */
   bottom: 15px;
   right: 15px;
   cursor: pointer;

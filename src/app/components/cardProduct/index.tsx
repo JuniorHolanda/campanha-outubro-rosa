@@ -11,9 +11,8 @@ import { CardProps } from "@/utils/interface";
 import { useScreenWidth } from "@/utils/mediaQueries";
 
 export default function Card({ product }: CardProps): JSX.Element {
-  const width = useScreenWidth();
-
-  const maxImgs = width < 1000 ? 1 : 3;
+const width = useScreenWidth();
+const maxImgs = width === undefined ? 3 : (width < 1000 ? 1 : 3);
 
 
   const [hovered, setHovered] = useState<number | null>(null);
