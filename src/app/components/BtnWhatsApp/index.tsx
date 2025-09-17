@@ -1,10 +1,18 @@
 import Link from "next/link";
-import { Sbtn } from "./btnWhatsApp.styled";
+import { Sbtn, Slink } from "./btnWhatsApp.styled";
 
 
 export default async function BtnZap() {
 
+  const textWhatsApp =
+    "Olá venho da campanha Outubro Rosa e gostaria de saber mais sobre os produtos.";
+  const numbWhatsApp = "38070539";
+
   return (
-    <Link href={'https://wa.me/551138070539?text=Ol%C3%A1%20gostaria%20de%20falar%20sobre%20os%20produtos%20de%20Feiras%2C%20Congressos%20e%20Eventos'} target="_blank" rel="noopener noreferrer"><Sbtn /></Link>
+    <Slink href={`https://wa.me/5511${numbWhatsApp}?text=${textWhatsApp}`}
+      target="_blank"
+      aria-label="Conversar no WhatsApp sobre a campanha de Outubro Rosa" rel="noopener noreferrer">
+      <Sbtn />
+    </Slink>
   );
 }

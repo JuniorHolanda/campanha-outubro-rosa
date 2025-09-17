@@ -33,7 +33,7 @@ export default function Slider({ slides }: MySwiperProps) {
                 loop
             >
                 {slides.map((slide, index) => (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={index} style={{ height: '100%' }}>
                         <h1>{slide.name}</h1>
                         <img src={slide.img} alt={slide.altImg} />
                     </SwiperSlide>
