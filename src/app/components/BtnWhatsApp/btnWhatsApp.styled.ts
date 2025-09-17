@@ -1,29 +1,34 @@
-'use client'
+'use client';
 
-import { FaWhatsapp } from "react-icons/fa";
-import styled from "styled-components";
+import Link from 'next/link';
+import { FaWhatsapp } from 'react-icons/fa';
+import styled from 'styled-components';
 
+export const Slink = styled(Link)`
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  /* border: solid 1px #00000013; */
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  border-radius: 300px;
+  transition: all.3s ease-in-out;
+  background-color: #cfcfcf3b;
+  color: ${({ theme }) => theme.colors.medium2};
 
+  &:hover {
+    background-color: #ffffff54;
+    color: ${({ theme }) => theme.colors.btnHover};
+    color: #3ba53bff;
+  }
+`;
 
 export const Sbtn = styled(FaWhatsapp)`
-    display: flex;
-    width: auto;
-    height: auto;
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
-    font-size: ${({theme}) => theme.fontSizes.textBig};
-    color: ${({theme}) => theme.colors.btn};
-    padding: 10px;
-    cursor: pointer;
-    z-index: 3;
-    
-    &:hover{
-        color: #075e54;
-    }
-
-
-    @media (max-width: ${({theme}) => theme.breakpoints.mobile}) {
-        font-size: 3em;
-    }
-`
+  display: flex;
+  width: auto;
+  height: auto;
+  font-size: ${({ theme }) => theme.fontSizes.textBig};
+  padding: 10px;
+`;

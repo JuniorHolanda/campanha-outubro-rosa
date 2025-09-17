@@ -20,6 +20,7 @@ export const Scontent = styled.article`
   width: 100%;
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
   gap: ${({ theme }) => theme.spacing.md};
+  backdrop-filter: blur(15px);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktop}) {
     padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.md};

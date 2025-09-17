@@ -2,6 +2,7 @@ export const theme = {
   colors: {
     default1: '#0c0c0cff',
     default2: '#ffffff',
+    default3: '#d8d8d8ff',
 
     //10%
     text: '#4e4b43ff',
