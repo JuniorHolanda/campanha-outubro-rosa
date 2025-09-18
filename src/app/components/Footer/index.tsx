@@ -18,6 +18,7 @@ import axios from "axios";
 type PropsData = {
   name: string;
   email: string;
+  empresa: string;
 };
 
 export default function Footer() {
@@ -28,6 +29,7 @@ export default function Footer() {
   const [formData, setFormData] = useState<PropsData>({
     name: "",
     email: "",
+    empresa: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,7 +44,7 @@ export default function Footer() {
 
       console.log("Sucesso:", data);
       alert("Inscrição realizada com sucesso!");
-      setFormData({ name: "", email: "" });
+      setFormData({ name: "", email: "", empresa: "" });
     } catch (error) {
       console.error(error);
       alert("Ocorreu um erro ao enviar os dados");
@@ -138,6 +140,18 @@ export default function Footer() {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   required
+                />
+              </label>
+               <label>
+                Insira sua empresa:
+                <input
+                  type="text"
+                  name="empresa"
+                  value={formData.empresa}
+                  placeholder="Digite o nome da empresa"
+                  onChange={(e) =>
+                    setFormData({ ...formData, empresa: e.target.value })
+                  }
                 />
               </label>
               <label>

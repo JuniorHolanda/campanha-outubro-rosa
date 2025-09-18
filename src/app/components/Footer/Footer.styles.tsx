@@ -81,7 +81,7 @@ export const Ssignature = styled.div`
   width: 100%;
   height: 10%;
   border-top: solid 2px ${({ theme }) => theme.colors.medium2};
-  color: ${({ theme }) => theme.colors.default1};
+  color: ${({ theme }) => theme.colors.medium2};
 
   address {
     display: flex;
@@ -110,6 +110,7 @@ export const Sform = styled.form`
   
   div{
     display: flex;
+    flex-direction: column;
     gap: ${({ theme }) => theme.spacing.sm};
   }
 
