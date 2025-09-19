@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Sbtn, Slink } from "./btnWhatsApp.styled";
 
 

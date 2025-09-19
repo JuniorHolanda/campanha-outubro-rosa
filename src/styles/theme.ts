@@ -31,13 +31,13 @@ export const theme = {
   },
 
   fontSizes: {
-    titleSmall: 'clamp(12px, 2vw, 2em)',
-    titleMedium: 'clamp(16px, 2.5vw, 3em)',
-    titleLarge: 'clamp(25px, 7vw, em)',
+    titleSmall: 'clamp(18px, 2vw, 2em)',
+    titleMedium: 'clamp(25px, 2.5vw, 3em)',
+    titleLarge: 'clamp(30px, 7vw, 4em)',
 
-    text: 'clamp(8px, 1vw, 2em)',
-    textMedium: 'clamp(10px, 1.5vw, 2.5em)',
-    textBig: 'clamp(16px, 3vw, 4em)',
+    text: 'clamp(12px, 1vw, 2em)',
+    textMedium: 'clamp(18px, 1vw, 3em)',
+    textBig: 'clamp(20px, 3vw, 4em)',
   },
   breakpoints: {
     mobile: '480px',
