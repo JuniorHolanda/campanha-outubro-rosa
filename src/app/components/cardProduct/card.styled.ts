@@ -7,7 +7,7 @@ interface PropsScontainerImg {
 }
 
 export const Scard = styled.article`
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -58,9 +58,9 @@ export const Scontent = styled.div`
   justify-content: space-between;
   align-items: start;
   gap: ${({ theme }) => theme.spacing.sm};
-  padding: ${({ theme }) => theme.spacing.sm};
+  padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
   width: 100%;
-  height: 40%;
+  height: auto;
   background-color: ${({ theme }) => theme.colors.background2};
   overflow: hidden;
   z-index: 1;
@@ -69,6 +69,7 @@ export const Scontent = styled.div`
   h1 {
     font-family: ${({ theme }) => theme.fonts.title};
     font-weight: 100;
+    font-size: ${({ theme }) => theme.fontSizes.titleSmall};
     font-style: italic;
     letter-spacing: 5px;
     color: ${({ theme }) => theme.colors.text};
@@ -92,8 +93,8 @@ export const Sbutton = styled(Link)`
   justify-content: start;
   align-items: center;
   width: 100%;
+  height: fit-content;
   font-size: ${({ theme }) => theme.fontSizes.text};
-  padding: ${({ theme }) => theme.spacing.sm};
 
   span {
     display: flex;
@@ -114,3 +115,57 @@ export const Sbutton = styled(Link)`
     }
   }
 `;
+
+
+export const SSgal = styled.div`
+  background-color: red;
+  z-index: 4;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+`;
+
+export const Sdialog = styled.dialog`
+  transform: translate(-50%, -50%);  
+  top: 50%;
+  left: 50%;
+  border-radius: ${({theme}) => theme.spacing.md};
+  padding: 16px;
+  width: 90%;
+  height: 90%;
+  background: #ffffffd0;
+  outline: none;
+  border: none;
+
+  &::backdrop {
+    backdrop-filter: blur(10px);
+  }
+`;
+
+export const Ssection = styled.section`
+    display: flex;
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+
+
+    div{
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        padding: 30px;
+        background-color: transparent;
+
+        img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+        }
+    }
+`

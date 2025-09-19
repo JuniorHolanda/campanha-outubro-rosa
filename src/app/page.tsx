@@ -9,7 +9,6 @@ import { GoBook } from "react-icons/go";
 import { Metadata } from "next";
 import EntraceLoad from "./components/EntranceLoading";
 import Footer from "./components/Footer";
-import GalleryPopUp from "./components/GalleryPopUp";
 
 export const metadata: Metadata = {
   title: "Outubro Rosa",

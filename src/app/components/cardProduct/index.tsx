@@ -1,30 +1,44 @@
 "use client";
-import React, { JSX, useEffect, useState } from "react";
+import React, { JSX, useRef, useState } from "react";
 import {
   Sbutton,
   Scard,
   ScontainerImg,
   ScontainerSlider,
   Scontent,
+  Sdialog,
+  Ssection,
 } from "./card.styled";
 import { CardProps } from "@/utils/interface";
 import { useScreenWidth } from "@/utils/mediaQueries";
 
 export default function Card({ product }: CardProps): JSX.Element {
-const width = useScreenWidth();
-const maxImgs = width === undefined ? 3 : (width < 1000 ? 1 : 3);
+  const width = useScreenWidth();
 
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  const openPopup = () => {
+    dialogRef.current?.showModal();
+  };
+
+  const closePopup = () => {
+    dialogRef.current?.close();
+  };
+
+
+  //controla a quantidade de img por card, 3 pra desktop e 1 pra mobile
+  const maxImgs = width === undefined ? 3 : width < 1000 ? 1 : 3;
 
   const [hovered, setHovered] = useState<number | null>(null);
 
   const getFlex = (index: number, hovered: number | null) => {
     if (hovered === null) {
       // larguras padrão
-      return [3, 2, 1][index];
+      return [4, 3, 2, 2][index];
     }
     if (hovered === index) {
       // quem está hover, aumenta
-      return 4;
+      return 5;
     } else {
       // os outros diminuem proporcionalmente
       return index === 0 ? 2 : index === 1 ? 1.5 : 1;
@@ -35,6 +49,29 @@ const maxImgs = width === undefined ? 3 : (width < 1000 ? 1 : 3);
 
   return (
     <Scard>
+      <Sdialog ref={dialogRef}>
+        <Ssection>
+          
+            {listImg
+              .map((item, index) => {
+                const expand = getFlex(index, hovered);
+                return (
+                  <ScontainerImg
+                    key={item._id}
+                    $expand={expand}
+                    onMouseEnter={() => setHovered(index)}
+                    onMouseLeave={() => setHovered(null)}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.altImg}
+                    />
+                  </ScontainerImg>
+                );
+              })}
+        </Ssection>
+      </Sdialog>
+
       <ScontainerSlider>
         {listImg
           .filter((_, index) => index < maxImgs)
@@ -48,7 +85,11 @@ const maxImgs = width === undefined ? 3 : (width < 1000 ? 1 : 3);
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
               >
-                <img src={item.img} alt={item.altImg} />
+                <img
+                  onClick={(e) => openPopup()}
+                  src={item.img}
+                  alt={item.altImg}
+                />
               </ScontainerImg>
             );
           })}
