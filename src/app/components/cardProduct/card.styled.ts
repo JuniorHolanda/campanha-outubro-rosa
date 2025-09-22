@@ -131,23 +131,46 @@ export const Sdialog = styled.dialog`
   transform: translate(-50%, -50%);  
   top: 50%;
   left: 50%;
-  border-radius: ${({theme}) => theme.spacing.md};
+  border-radius: ${({ theme }) => theme.spacing.md};
   padding: 16px;
   width: 90%;
   height: 90%;
   background: #ffffffd0;
   outline: none;
   border: none;
+  overflow: hidden;
+
 
   &::backdrop {
     backdrop-filter: blur(10px);
   }
 `;
 
+export const SwrapperBtnClose = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 10%;
+
+  button {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: ${({ theme }) => theme.fontSizes.titleMedium};
+    background-color: transparent;
+    cursor: pointer;
+    height: 100%;
+    width: fit-content;
+    padding: ${({ theme }) => theme.spacing.sm};
+}
+`;
+
 export const Ssection = styled.section`
     display: flex;
     width: 100%;
-    height:100%;
+    height:90%;
     overflow: hidden;
 
 

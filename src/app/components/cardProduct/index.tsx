@@ -8,9 +8,11 @@ import {
   Scontent,
   Sdialog,
   Ssection,
+  SwrapperBtnClose,
 } from "./card.styled";
 import { CardProps } from "@/utils/interface";
 import { useScreenWidth } from "@/utils/mediaQueries";
+import { IoClose } from "react-icons/io5";
 
 export default function Card({ product }: CardProps): JSX.Element {
   const width = useScreenWidth();
@@ -50,8 +52,10 @@ export default function Card({ product }: CardProps): JSX.Element {
   return (
     <Scard>
       <Sdialog ref={dialogRef}>
+        <SwrapperBtnClose>
+          <button onClick={() => closePopup()}><IoClose /></button>
+        </SwrapperBtnClose>
         <Ssection>
-          
             {listImg
               .map((item, index) => {
                 const expand = getFlex(index, hovered);
@@ -68,7 +72,7 @@ export default function Card({ product }: CardProps): JSX.Element {
                     />
                   </ScontainerImg>
                 );
-              })}
+            })}
         </Ssection>
       </Sdialog>
 
