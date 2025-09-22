@@ -29,7 +29,8 @@ export default function Card({ product }: CardProps): JSX.Element {
 
 
   //controla a quantidade de img por card, 3 pra desktop e 1 pra mobile
-  const maxImgs = width === undefined ? 3 : width < 1000 ? 1 : 3;
+  const maxImgs = width === undefined || width >= 1300 ? 3
+  : width > 800 ? 2 : 1;
 
   const [hovered, setHovered] = useState<number | null>(null);
 

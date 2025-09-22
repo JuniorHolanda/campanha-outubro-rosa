@@ -60,7 +60,7 @@ export const Scontent = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
   padding: ${({ theme }) => theme.spacing.sm} ${({ theme }) => theme.spacing.md};
   width: 100%;
-  height: auto;
+  height: 40%;
   background-color: ${({ theme }) => theme.colors.background2};
   overflow: hidden;
   z-index: 1;
