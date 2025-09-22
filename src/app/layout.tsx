@@ -3,6 +3,8 @@ import ThemeProviderWrapper from "./components/ThemeProviderWrapper";
 import GlobalStylesProvider from "./components/GlobalStyleProvider";
 import BtnZap from "./components/BtnWhatsApp";
 import { StyledComponentsRegistry } from "@/utils/StyledConponents";
+import Script from "next/script";
+import Analytics from "./Analytics";
 
 
 const title = DM_Serif_Text({
@@ -28,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${title.variable} ${text.variable}`}>
+        <Analytics/>
         <StyledComponentsRegistry>
           <ThemeProviderWrapper>
             <GlobalStylesProvider />
