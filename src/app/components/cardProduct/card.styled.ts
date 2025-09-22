@@ -88,9 +88,9 @@ type StextureProps = {
   rotateTexture: number;
 };
 
-export const Sbutton = styled(Link)`
+export const SbuttonProduct = styled(Link)`
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: fit-content;
@@ -161,16 +161,17 @@ export const SwrapperBtnClose = styled.div`
     font-size: ${({ theme }) => theme.fontSizes.titleMedium};
     background-color: transparent;
     cursor: pointer;
-    height: 100%;
+    height: auto;
     width: fit-content;
     padding: ${({ theme }) => theme.spacing.sm};
+    outline: none;
 }
 `;
 
 export const Ssection = styled.section`
     display: flex;
     width: 100%;
-    height:90%;
+    height:80%;
     overflow: hidden;
 
 

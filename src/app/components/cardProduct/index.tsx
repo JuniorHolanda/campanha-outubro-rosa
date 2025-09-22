@@ -1,7 +1,7 @@
 "use client";
 import React, { JSX, useRef, useState } from "react";
 import {
-  Sbutton,
+  SbuttonProduct,
   Scard,
   ScontainerImg,
   ScontainerSlider,
@@ -74,6 +74,9 @@ export default function Card({ product }: CardProps): JSX.Element {
                 );
             })}
         </Ssection>
+        <SbuttonProduct href={`/produtos/${product._id}`}>
+          <span>Ver Produto</span>
+        </SbuttonProduct>
       </Sdialog>
 
       <ScontainerSlider>
@@ -101,9 +104,9 @@ export default function Card({ product }: CardProps): JSX.Element {
       <Scontent>
         <h1>{product.title}</h1>
         <p>{product.smallText}</p>
-        <Sbutton href={`/produtos/${product._id}`}>
+        <SbuttonProduct href={`/produtos/${product._id}`}>
           <span>Ver Produto</span>
-        </Sbutton>
+        </SbuttonProduct>
       </Scontent>
     </Scard>
   );
